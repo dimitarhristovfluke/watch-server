@@ -1,0 +1,80 @@
+{
+  "_args": [
+    [
+      "git://github.com/dimitarhristov/dbffile.git#master",
+      "C:\\eMaint\\DEV\\X3_DEV\\wconnect\\node\\projects\\watch"
+    ]
+  ],
+  "_from": "git://github.com/dimitarhristov/dbffile.git#master",
+  "_id": "dbffile@git://github.com/dimitarhristov/dbffile.git#95d203e387c859c89e719e5d0079810aa5ee1819",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/dbffile",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git://github.com/dimitarhristov/dbffile.git#master",
+    "rawSpec": "git://github.com/dimitarhristov/dbffile.git#master",
+    "saveSpec": "git://github.com/dimitarhristov/dbffile.git#master",
+    "fetchSpec": "git://github.com/dimitarhristov/dbffile.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/dimitarhristov/dbffile.git#95d203e387c859c89e719e5d0079810aa5ee1819",
+  "_spec": "git://github.com/dimitarhristov/dbffile.git#master",
+  "_where": "C:\\eMaint\\DEV\\X3_DEV\\wconnect\\node\\projects\\watch",
+  "author": {
+    "name": "Troy Gerwien",
+    "email": "yortus@gmail.com",
+    "url": "http://github.com/yortus/"
+  },
+  "bugs": {
+    "url": "https://github.com/yortus/DBFFile/issues"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.4.24"
+  },
+  "description": "Read and write .dbf (dBase III & Visual FoxPro) files in Node.js",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^8.10.49",
+    "@types/rimraf": "^2.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "ncp": "^2.0.0",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.1"
+  },
+  "homepage": "https://github.com/dimitarhristov/DBFFile.git",
+  "keywords": [
+    "dbf",
+    "dBase",
+    "dBase III",
+    "vfp",
+    "Visual FoxPro"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "dbffile",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimitarhristov/DBFFile.git"
+  },
+  "scripts": {
+    "build": "tsc -p src && tsc -p test && ncp test/fixtures dist/test/fixtures",
+    "build:watch": "tsc -w -p src & (ncp test/fixtures dist/test/fixtures && tsc -w -p test)",
+    "clean": "rimraf dist/",
+    "prepublish": "npm run self-ref && npm run build",
+    "self-ref": "node ./scripts/enable-self-reference",
+    "test": "mocha --timeout 999999 --colors ./dist/test",
+    "test:watch": "npm run build:watch & npx mocha ./dist/test/ --watch"
+  },
+  "typings": "dist/index.d.ts",
+  "version": "1.4.1"
+}

@@ -1,0 +1,45 @@
+{
+  "rulesDirectory": ["rules", "node_modules/tslint-microsoft-contrib"],
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "devOnly": ["sorted-imports"],
+  "rules": {
+    "curly": false,
+    "gettext-string-literal": true,
+    "interface-name": [true, "never-prefix"],
+    "member-access": null,
+    "ordered-imports": false,
+    "arrow-parens": false,
+    "no-misused-new": false,
+    "no-shadowed-variable": false,
+    "no-string-literal": false,
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "only-arrow-functions": false,
+    "one-line": [
+      true,
+      "check-catch",
+      "check-finally",
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "quotemark": [true, "double", "avoid-escape", "jsx-double"],
+    "radix": false,
+    "react-this-binding-issue": true,
+    "semicolon": null,
+    "sorted-imports": true,
+    "max-classes-per-file": false,
+    "switch-default": false,
+    "trailing-comma": false,
+    "triple-equals": false,
+    "typedef-whitespace": false,
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-typecast"
+    ]
+  }
+}
